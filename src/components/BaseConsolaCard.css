@@ -1,0 +1,63 @@
+/* BaseConsolaCard.css */
+
+.base-consola-card {
+    width: 100%;
+    background: #1e1e1e;
+    border: 3px solid;
+    border-radius: 16px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.base-consola-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.55);
+}
+
+.base-consola-card h3 {
+    margin: 10px 0 6px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.base-consola-card p {
+    margin: 4px 0;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Imagen base */
+.base-consola-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+
+/* Contenedor para children adicionales (juegos, comentarios, etc.) */
+.base-consola-children {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Responsive: tarjetas más pequeñas en móviles */
+@media (max-width: 480px) {
+    .base-consola-card {
+        padding: 15px;
+    }
+
+    .base-consola-image {
+        max-height: 150px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,40 @@
+/* Header.css */
+.header {
+  background-color: #2a2a2a;
+  padding: 20px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-bottom: 4px solid #00bcd4;
+  text-align: center;
+}
+
+.header__title {
+  color: #f0f0f0;
+  margin: 0;
+  font-size: 2em;
+}
+
+.header__nav {
+  margin-top: 10px;
+}
+
+.header__nav a {
+  color: #8bc34a;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header__nav a:hover {
+  color: #f0f0f0;
+} /* Header.css */
+.header {
+  background-color: #2a2a2a;
+  padding: 20px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-bottom: 4px solid #00bcd4;
+  text-align: center;
+  /* 💡 CAMBIO: Añadimos un margen inferior para la separación */
+  margin-bottom: 40px;
+}
+/* ... resto de estilos de Header.css */

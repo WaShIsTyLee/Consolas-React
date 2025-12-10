@@ -1,0 +1,6 @@
+.consola-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 16px; /* espacio entre tarjetas */
+  padding: 16px;
+}

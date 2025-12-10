@@ -1,0 +1,23 @@
+/* ToggleCommentsButton.css */
+
+.toggle-comments-btn {
+  background-color: #007bff; /* azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-bottom: 10px;
+}
+
+.toggle-comments-btn:hover {
+  background-color: #0056b3; /* azul más oscuro al pasar el ratón */
+  transform: scale(1.05); /* efecto pequeño de “zoom” al pasar el ratón */
+}
+
+.toggle-comments-btn:active {
+  background-color: #004085; /* azul aún más oscuro al hacer clic */
+  transform: scale(0.98); /* efecto “presionar” */
+}

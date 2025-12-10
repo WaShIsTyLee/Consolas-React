@@ -1,0 +1,35 @@
+/* LatestConsolesCard.css */
+.latest-console-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid; /* El color se define inline */
+    background-color: #333;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.latest-console-card:hover {
+    background-color: #444;
+}
+
+.latest-console-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.latest-console-card h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #f0f0f0;
+}
+
+.latest-console-tag {
+    font-size: 0.9em;
+    color: #8bc34a;
+    margin: 0;
+}

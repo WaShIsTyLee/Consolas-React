@@ -1,0 +1,138 @@
+/* App.css */
+
+/* --- RESET Y ESTILOS BASE --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    line-height: 1.5;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.app-container {
+    display: flex;          /* Sidebar + contenido principal */
+    gap: 30px;
+    padding: 20px 10px;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 300px; /* nuevo ancho */
+    flex-shrink: 0;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+
+/* --- CONTENIDO PRINCIPAL --- */
+.main-content-wrapper {
+    flex: 1;                /* Ocupa todo el espacio restante */
+    min-width: 0;           /* Muy importante para que los grids internos se comporten */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+/* --- HEADER Y FOOTER --- */
+.main-content-wrapper header,
+.main-content-wrapper footer {
+    background-color: #2a2a2a;
+    padding: 15px 20px;
+    border-radius: 12px;
+}
+
+/* --- LISTA DE CONSOLAS --- */
+.consola-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- TARJETAS DE CONSOLAS --- */
+.consola-card {
+    width: 100%;
+    margin: 0;               /* Sin margen para grid */
+    background: #1e1e1e;
+    border: 3px solid;
+    border-radius: 16px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.consola-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.55);
+}
+
+/* --- GRID DE JUEGOS DENTRO DE CADA TARJETA --- */
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* --- IMÁGENES --- */
+.consola-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 15px 0;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+
+/* --- BOTÓN DE COMENTARIOS --- */
+.toggle-comments-btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0 15px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.toggle-comments-btn:hover {
+    background: #444; 
+}
+
+/* --- SECCIÓN DE COMENTARIOS --- */
+.comments-section {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 100%; /* se apila arriba del contenido */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .game-list {
+        grid-template-columns: 1fr 1fr; /* Juegos en 2 columnas en móvil */
+    }
+}
